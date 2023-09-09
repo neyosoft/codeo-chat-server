@@ -21,8 +21,6 @@ app.get("/", (req, res) => {
 
 io.on("connection", (socket) => {
 	socket.on("disconnect", function () {
-		console.log("A user disconnected: ", socket.id);
-
 		const existingUserIndex = userList.findIndex((record) => record.id === socket.id);
 
 		if (existingUserIndex !== -1) {
@@ -49,7 +47,15 @@ io.on("connection", (socket) => {
 	});
 
 	socket.on("group-message", ({ name, message }) => {
-		io.to(name).emit("chat", message);
+		const currentUser = userList.find((record) => record.id === socket.id);
+
+		if (currentUser) {
+			io.to(name).emit("new-group-chat", {
+				message,
+				name: currentUser.name,
+				phone: currentUser.phone,
+			});
+		}
 	});
 });
 
