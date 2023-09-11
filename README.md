@@ -31,6 +31,10 @@ By default, the application will start on port 9900
 
 ### Future improvement
 
--   [ ] Authentication
+-   [ ] Implement user registration and authentication to ensure secure access to the messaging system.
+-   [ ] Create APIs/routes for managing contacts (e.g., add, remove, list).
+-   [ ] Implement real-time updates for incoming messages.
 -   [ ] Chat validation
 -   [ ] Error handling
+-   [ ] Chat persistence to Database like Posgress or MongoDB
+-   [ ] Write unit tests and integration tests
