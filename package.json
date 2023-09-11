@@ -1,5 +1,5 @@
 {
-	"name": "codeo-chat",
+	"name": "codeo-chat-server",
 	"version": "0.1.0",
 	"description": "basic codeo chat application",
 	"scripts": {

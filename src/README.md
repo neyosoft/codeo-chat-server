@@ -28,3 +28,9 @@ cp .env.example > .env
 
 By default, the application will start on port 9900
 [http://localhost:9900](http://localhost:9900)
+
+### Future improvement
+
+-   [ ] Authentication
+-   [ ] Chat validation
+-   [ ] Error handling
